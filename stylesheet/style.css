@@ -1,0 +1,394 @@
+html {
+  scroll-behavior: smooth;
+}
+html ::-webkit-scrollbar {
+  width: 1em;
+}
+html ::-webkit-scrollbar-track {
+  background: rgba(58, 175, 169, 0.3);
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #3aafa9;
+  border-radius: 3px;
+}
+html body {
+  font-family: "Sora", sans-serif;
+  line-height: 1.7;
+  color: #888888;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body display-4 {
+  color: #21252f;
+  font-weight: 700 !important;
+}
+html body a {
+  color: #21252f;
+  text-decoration: none;
+}
+html body .btn {
+  padding: 12px 18px;
+  border-width: 2px;
+  border: 2px solid #3AAFA9;
+  font-weight: 600;
+  color: #3AAFA9;
+}
+html body .btn:hover {
+  color: white;
+  background-color: #3AAFA9 !important;
+}
+html body .iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3AAFA9;
+  color: white;
+  font-size: 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  flex: none;
+}
+html body img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+html body .card-effect {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 9px 20px;
+  transition: all 0.35s ease;
+  border-radius: 8px;
+}
+html body .card-effect:hover {
+  transform: translateY(10px);
+}
+html body .navbar {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+html body .navbar .nav-link {
+  font-size: 14px !important;
+  font-weight: 700;
+}
+html body .hero {
+  position: relative;
+  background-image: url(../images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+html body .hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+html body .hero #get-started-popup {
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  border-radius: 12px;
+  background: #3aafa9;
+  display: none;
+  -webkit-animation: fade-in 1s ease;
+          animation: fade-in 1s ease;
+  box-shadow: 0 8px 22px rgba(58, 175, 169, 0.4);
+}
+html body .hero #get-started-popup form .cross-icon {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 90%;
+}
+html body .hero #get-started-popup form input {
+  transition: all 0.4s ease;
+}
+html body .hero #get-started-popup form input:hover {
+  transition: all 0.4s ease;
+  border: 1px solid #21252f;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+html body .hero #get-started-popup form input:hover::-moz-placeholder {
+  color: #3AAFA9;
+}
+html body .hero #get-started-popup form input:hover:-ms-input-placeholder {
+  color: #3AAFA9;
+}
+html body .hero #get-started-popup form input:hover::placeholder {
+  color: #3AAFA9;
+}
+html body .hero #get-started-popup form input[type=checkbox] {
+  width: 22px;
+  height: 22px;
+  box-shadow: none;
+}
+html body .hero #get-started-popup form button {
+  border: 2px solid white;
+  color: white;
+  transition: all 0.4s ease;
+}
+html body .hero #get-started-popup form button:hover {
+  border: 2px solid #21252f;
+  color: #21252f;
+  background: #36a49e !important;
+}
+html body section,
+html body #templetes,
+html body .templetes-section {
+  padding: 120px 0px;
+}
+html body section .container .row h6,
+html body #templetes .container .row h6,
+html body .templetes-section .container .row h6 {
+  color: #3AAFA9 !important;
+}
+html body section .container .row .col-lg-4 .card-effect img,
+html body #templetes .container .row .col-lg-4 .card-effect img,
+html body .templetes-section .container .row .col-lg-4 .card-effect img {
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 2s ease;
+  cursor: pointer;
+}
+html body section .container .row .col-lg-4 .card-effect img:hover,
+html body #templetes .container .row .col-lg-4 .card-effect img:hover,
+html body .templetes-section .container .row .col-lg-4 .card-effect img:hover {
+  transform: scale(1.09, 1.09);
+}
+html body section .container .row .col-lg-4 .card-effect button,
+html body #templetes .container .row .col-lg-4 .card-effect button,
+html body .templetes-section .container .row .col-lg-4 .card-effect button {
+  width: 100%;
+  border: 2px solid #3AAFA9;
+  color: #3AAFA9;
+  transition: all 0.4s ease;
+}
+html body section .container .row .col-lg-4 .card-effect .iconbox,
+html body #templetes .container .row .col-lg-4 .card-effect .iconbox,
+html body .templetes-section .container .row .col-lg-4 .card-effect .iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3AAFA9;
+  color: white;
+  font-size: 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+html body section .container .row .col-lg-4 .templete-cards,
+html body #templetes .container .row .col-lg-4 .templete-cards,
+html body .templetes-section .container .row .col-lg-4 .templete-cards {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+html body section .container .row .col-lg-4 .templete-cards::after,
+html body #templetes .container .row .col-lg-4 .templete-cards::after,
+html body .templetes-section .container .row .col-lg-4 .templete-cards::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+html body section .container .row .col-lg-4 .templete-cards:hover h5,
+html body #templetes .container .row .col-lg-4 .templete-cards:hover h5,
+html body .templetes-section .container .row .col-lg-4 .templete-cards:hover h5 {
+  color: #ffffff;
+}
+html body section .container .row .col-lg-4 .templete-cards:hover .iconbox,
+html body #templetes .container .row .col-lg-4 .templete-cards:hover .iconbox,
+html body .templetes-section .container .row .col-lg-4 .templete-cards:hover .iconbox {
+  background-color: white;
+  color: #3AAFA9;
+}
+html body section .container .row .col-lg-4 .templete-cards:hover button,
+html body #templetes .container .row .col-lg-4 .templete-cards:hover button,
+html body .templetes-section .container .row .col-lg-4 .templete-cards:hover button {
+  background-color: white;
+  color: #21252f;
+  border: 2px solid #21252f;
+}
+html body section .container .row .col-lg-4 .templete-cards:hover button:hover,
+html body #templetes .container .row .col-lg-4 .templete-cards:hover button:hover,
+html body .templetes-section .container .row .col-lg-4 .templete-cards:hover button:hover {
+  color: white !important;
+}
+html body section .container .row .col-lg-4 .templete-cards:hover::after,
+html body #templetes .container .row .col-lg-4 .templete-cards:hover::after,
+html body .templetes-section .container .row .col-lg-4 .templete-cards:hover::after {
+  background-color: #3AAFA9 !important;
+  opacity: 1;
+  top: 0;
+}
+html body #pricing .col-img img {
+  width: 100%;
+  height: 100%;
+}
+html body #more-templetes .container-fluid .main-row .fst-row .col-sm-6 .collections {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+html body #more-templetes .container-fluid .main-row .fst-row .col-sm-6 .collections img {
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  border-radius: 8px;
+}
+html body #more-templetes .container-fluid .main-row .fst-row .col-sm-6 .collections .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+html body #more-templetes .container-fluid .main-row .fst-row .col-sm-6 .collections:hover .overlay {
+  opacity: 1;
+}
+html body #more-templetes .container-fluid .main-row .fst-row .col-sm-6 .collections:hover img {
+  transform: scale(1.2);
+}
+html body #team .container-fluid .team-member img {
+  width: 125px;
+  height: 125px;
+  border-radius: 100px;
+}
+html body #team .container-fluid .team-member .social-icons {
+  display: flex;
+  justify-content: center;
+}
+html body #team .container-fluid .team-member .social-icons a {
+  width: 34px;
+  height: 34px;
+  background-color: #3AAFA9;
+  border: 2px solid #3AAFA9;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 5px;
+  transition: all 0.4s ease;
+}
+html body #team .container-fluid .team-member .social-icons a:hover {
+  color: #3AAFA9;
+  background-color: white;
+}
+html body #contact .container-fluid form .form-control {
+  height: 56px;
+  border: 0px solid #3AAFA9;
+  background-color: rgba(0, 0, 0, 0.08);
+  transition: all 0.4s linear;
+}
+html body #contact .container-fluid form .form-control:hover {
+  border: 2px solid #3AAFA9;
+  background-color: transparent;
+}
+html body #contact .container-fluid form .form-control:hover::-moz-placeholder {
+  color: #3AAFA9;
+}
+html body #contact .container-fluid form .form-control:hover:-ms-input-placeholder {
+  color: #3AAFA9;
+}
+html body #contact .container-fluid form .form-control:hover::placeholder {
+  color: #3AAFA9;
+}
+html body #footer .footer-top {
+  padding: 90px;
+  background-color: #3AAFA9;
+}
+html body #footer .footer-top .container .logo {
+  width: 160px;
+}
+html body #footer .footer-top .container ul li {
+  color: #000000;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+html body #footer .footer-top .container ul li:hover {
+  color: white;
+}
+html body #footer .footer-top .container ul li a {
+  color: #000000;
+  transition: all 0.4s ease;
+}
+html body #footer .footer-top .container ul li a:hover {
+  color: white;
+}
+html body #footer .footer-bottom {
+  background: rgba(58, 175, 169, 0.85);
+  color: #000000;
+}
+html body #footer .footer-bottom p {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+html body #footer .footer-bottom p:hover {
+  color: white;
+}
+html body #footer .footer-bottom .social-icons {
+  display: flex;
+  justify-content: center;
+}
+html body #footer .footer-bottom .social-icons a {
+  width: 34px;
+  height: 34px;
+  background-color: #3AAFA9;
+  border: 2px solid #3AAFA9;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 5px;
+  transition: all 0.4s ease;
+}
+html body #footer .footer-bottom .social-icons a:hover {
+  color: #3AAFA9;
+  background-color: white;
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

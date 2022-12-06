@@ -1,0 +1,490 @@
+// Variables
+$primary-color: #3AAFA9;
+$dark-color: #21252f;
+$body-color: #888888;
+$box-shadow: 0 8px 22px rgba($color: #000000, $alpha: 0.1);
+
+// Body Style
+html {
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba($primary-color, $alpha: 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba($primary-color, $alpha: 1.0);
+        border-radius: 3px;
+    }
+
+    body {
+        font-family: 'Sora',
+            sans-serif;
+        line-height: 1.7;
+        color: $body-color;
+
+        // All h1 h2 h3 h4 h5 h6 & display-4 class Style in the body
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        display-4 {
+            color: $dark-color;
+            font-weight: 700 !important;
+        }
+
+        // All ancher tags in the body Style
+        a {
+            color: $dark-color;
+            text-decoration: none;
+        }
+
+        // All Buttons in body
+        .btn {
+            padding: 12px 18px;
+            border-width: 2px;
+            border: 2px solid $primary-color;
+            font-weight: 600;
+            color: $primary-color;
+
+            &:hover {
+                color: white;
+                background-color: $primary-color !important;
+            }
+        }
+
+        //Icon-box in body
+        .iconbox {
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary-color;
+            color: white;
+            font-size: 32px;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            flex: none;
+        }
+
+        // All images in body
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        //All cards in body
+        .card-effect {
+            box-shadow: $box-shadow;
+            background-color: #ffffff;
+            padding: 9px 20px;
+            transition: all 0.35s ease;
+            border-radius: 8px;
+
+            &:hover {
+                transform: translateY(10px);
+            }
+        }
+
+        // Navbar Style
+        .navbar {
+            box-shadow: $box-shadow;
+
+            .nav-link {
+                font-size: 14px !important;
+                font-weight: 700;
+            }
+        }
+
+        // Hero section Style
+        .hero {
+            position: relative;
+            background-image: url(../images/hero-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba($color: #000000, $alpha: 0.8);
+                z-index: -1;
+            }
+
+            #get-started-popup {
+                position: fixed;
+                top: 20%;
+                left: 10%;
+                right: 10%;
+                border-radius: 12px;
+                background: rgba($primary-color, $alpha: 1.0);
+                display: none;
+                animation: fade-in 1s ease;
+                box-shadow: 0 8px 22px rgba($primary-color, $alpha: 0.4);
+
+                form {
+                    .cross-icon {
+                        color: white;
+                        position: absolute;
+                        top: 0;
+                        left: 90%
+                    }
+
+                    input {
+                        transition: all .4s ease;
+
+
+                        &:hover {
+                            transition: all .4s ease;
+                            border: 1px solid $dark-color;
+                            box-shadow: 0 8px 22px rgba($color: #000000, $alpha: 0.3);
+
+
+                            &::placeholder {
+                                color: $primary-color;
+                            }
+                        }
+
+                        &[type="checkbox"] {
+                            width: 22px;
+                            height: 22px;
+                            box-shadow: none;
+                        }
+                    }
+
+                    button {
+                        border: 2px solid white;
+                        color: white;
+                        transition: all .4s ease;
+
+                        &:hover {
+                            border: 2px solid $dark-color;
+                            color: $dark-color;
+                            background: darken($primary-color, 3%) !important;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        // Section
+        section,
+        #templetes,
+        .templetes-section {
+            padding: 120px 0px;
+
+            .container {
+                .row {
+                    h6 {
+                        color: $primary-color !important;
+                    }
+
+                    .col-lg-4 {
+
+                        .card-effect {
+                            img {
+                                border-radius: 8px;
+                                object-fit: cover;
+                                transition: all 2s ease;
+                                cursor: pointer;
+
+                                &:hover {
+                                    transform: scale(1.09, 1.09);
+                                }
+                            }
+
+                            button {
+                                width: 100%;
+                                border: 2px solid $primary-color;
+                                color: $primary-color;
+                                transition: all .4s ease;
+                            }
+
+                            .iconbox {
+                                width: 54px;
+                                height: 54px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $primary-color;
+                                color: white;
+                                font-size: 32px;
+                                border-radius: 100px;
+                                cursor: pointer;
+                                transition: all 0.35s ease;
+                            }
+                        }
+
+                        .templete-cards {
+                            position: relative;
+                            z-index: 2;
+                            overflow: hidden;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: -100%;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: -1;
+                                opacity: 0;
+                                transition: all 0.4s ease;
+                            }
+
+                            &:hover {
+                                h5 {
+                                    color: #ffffff;
+                                }
+
+                                .iconbox {
+                                    background-color: white;
+                                    color: $primary-color;
+                                }
+
+                                button {
+                                    background-color: white;
+                                    color: $dark-color;
+                                    border: 2px solid $dark-color;
+
+                                    &:hover {
+                                        color: white !important;
+                                    }
+                                }
+
+                                &::after {
+                                    background-color: $primary-color !important;
+                                    opacity: 1;
+                                    top: 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+
+        }
+
+        // Pricing Section
+        #pricing {
+            .col-img {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        //More Templete Section
+        #more-templetes {
+            .container-fluid {
+                .main-row {
+                    .fst-row {
+                        .col-sm-6 {
+                            .collections {
+                                position: relative;
+                                overflow: hidden;
+                                border-radius: 8px;
+
+                                img {
+                                    border-radius: 8px;
+                                    transition: all .4s ease;
+                                    border-radius: 8px;
+                                }
+
+                                .overlay {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 30px;
+                                    display: flex;
+                                    align-items: flex-end;
+                                    transition: all .4s ease;
+                                    opacity: 0;
+                                    border-radius: 8px;
+                                    background-color: rgba($color: #000000, $alpha: 0.7);
+                                }
+
+                                &:hover {
+                                    .overlay {
+                                        opacity: 1;
+                                    }
+
+                                    img {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #team {
+            .container-fluid {
+                .team-member {
+                    img {
+                        width: 125px;
+                        height: 125px;
+                        border-radius: 100px;
+                    }
+
+                    .social-icons {
+                        display: flex;
+                        justify-content: center;
+
+                        a {
+                            width: 34px;
+                            height: 34px;
+                            background-color: $primary-color;
+                            border: 2px solid $primary-color;
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100px;
+                            margin-left: 5px;
+                            transition: all .4s ease;
+
+                            &:hover {
+                                color: $primary-color;
+                                background-color: white;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        #contact {
+            .container-fluid {
+                form {
+                    .form-control {
+                        height: 56px;
+                        border: 0px solid $primary-color;
+                        background-color: rgba($color: #000000, $alpha: 0.08);
+                        transition: all 0.4s linear;
+
+                        &:hover {
+                            border: 2px solid $primary-color;
+                            background-color: transparent;
+
+                            &::placeholder {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer {
+            .footer-top {
+                padding: 90px;
+                background-color: $primary-color;
+
+                .container {
+                    .logo {
+                        width: 160px;
+                    }
+
+                    ul {
+                        li {
+                            color: #000000;
+                            transition: all .4s ease;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: white;
+                            }
+
+                            a {
+                                color: #000000;
+                                transition: all .4s ease;
+
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-bottom {
+                background: rgba($primary-color, $alpha: 0.85);
+                color: #000000;
+
+                p {
+                    cursor: pointer;
+                    transition: all .4s ease;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                .social-icons {
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        width: 34px;
+                        height: 34px;
+                        background-color: $primary-color;
+                        border: 2px solid $primary-color;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100px;
+                        margin-left: 5px;
+                        transition: all .4s ease;
+
+                        &:hover {
+                            color: $primary-color;
+                            background-color: white;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+
+            }
+        }
+    }
+}
